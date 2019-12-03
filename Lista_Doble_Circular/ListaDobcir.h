@@ -4,24 +4,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct ElementoCircular{
-       int dato;
-       struct ElementoCircular *anterior;
-       struct ElementoCircular *siguiente;
+struct Circular
+{
+  struct Circular *inicio;
+  struct Circular *fin;
+  int dato;
+  struct Circular *anterior;
+  struct Circular *siguiente;
+  int tamano;
 };
 
-struct CircularId{
-       struct ElementoCircular *inicio;
-       struct ElementoCircular *fin;
-       int tamano;
-};
-
-void inicializacion(struct CircularId *lista);
-int insercion_lista_vacia(struct CircularId *lista, int dato);
-int insercion_inicio(struct CircularId *lista, int dato);
-int insercion_fin(struct CircularId *lista, int dato);
-void visualizar_adelante(struct CircularId *lista);
-void visualizar_atras(struct CircularId *lista);
-int eliminar(struct CircularId *lista, int pos);
+void inicializacion (struct Circular *lista);
+int insercion_lista_vacia (struct Circular *lista, int dato);
+int insercion_inicio (struct Circular *lista, int dato);
+int insercion_fin (struct Circular *lista, int dato);
+void visualizar_adelante (struct Circular *lista);
+void visualizar_atras (struct Circular *lista);
+int eliminar (struct Circular *lista, int pos);
 
 #endif
