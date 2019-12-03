@@ -1,25 +1,22 @@
-#ifndef LISTADOBCIR_H_INCLUDED
-#define LISTADOBCIR_H_INCLUDED
+#ifndef LISTACIRCULAR_H_INCLUDED
+#define LISTACIRCULAR_H_INCLUDED
 
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Circular
+struct Listacir
 {
-  struct Circular *inicio;
-  struct Circular *fin;
   int dato;
-  struct Circular *anterior;
-  struct Circular *siguiente;
+  struct Listacir *inicio;
+  struct Listacir *fin;
+  struct Listacir *siguiente;
   int tamano;
 };
 
-void inicializacion (struct Circular *lista);
-int insercion_lista_vacia (struct Circular *lista, int dato);
-int insercion_inicio (struct Circular *lista, int dato);
-int insercion_fin (struct Circular *lista, int dato);
-void visualizar_adelante (struct Circular *lista);
-void visualizar_atras (struct Circular *lista);
-int eliminar (struct Circular *lista, int pos);
+void inicializacion (struct Listacir *lista);
+int ins_lista_vacia (struct Listacir *lista, int dato);
+int ins_lista (struct Listacir *lista, int dato);
+void visualizar (struct Listacir *lista);
+int eliminar (struct Listacir *lista, int pos);
 
 #endif
