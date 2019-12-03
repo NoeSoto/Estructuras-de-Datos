@@ -4,21 +4,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct ElementoLista{
+struct Listacir{
        int dato;
-       struct ElementoLista *siguiente;
-};
-
-struct ListaId{
-       struct ElementoLista *inicio;
-       struct ElementoLista *fin;
+       struct Listacir *inicio;
+       struct Listacir *fin;
+       struct Listacir *siguiente;
        int tamano;
 };
 
-void inicializacion(struct ListaId *lista);
-int ins_lista_vacia(struct ListaId *lista, int dato);
-int ins_lista(struct ListaId *lista, int dato);
-void visualizar(struct ListaId *lista);
-int eliminar(struct ListaId *lista, int pos);
+void inicializacion(struct Listacir *lista);
+int ins_lista_vacia(struct Listacir *lista, int dato);
+int ins_lista(struct Listacir *lista, int dato);
+void visualizar(struct Listacir *lista);
+int eliminar(struct Listacir *lista, int pos);
 
 #endif
