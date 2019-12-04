@@ -4,21 +4,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct ElementoCola {
+struct Cola
+{
   int dato;
-  struct ElementoCola *siguiente;
-};
-
-struct ColaId {
-  struct ElementoCola *inicio;
-  struct ElementoCola *fin;
+  struct Cola *inicio;
+  struct Cola *fin;
+  struct Cola *siguiente;
   int tamano;
 };
 
-void inicializacion(struct ColaId *cola);
-int ins_cola_vacia(struct ColaId *cola, int dato);
-int ins_cola(struct ColaId *cola, int dato);
-void visualizar(struct ColaId *cola);
-int eliminar(struct ColaId *cola);
+void inicializacion (struct Cola *cola);
+int ins_cola_vacia (struct Cola *cola, int dato);
+int ins_cola (struct Cola *cola, int dato);
+void visualizar (struct Cola *cola);
+int eliminar (struct Cola *cola);
 
 #endif
