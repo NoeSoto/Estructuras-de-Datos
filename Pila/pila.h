@@ -4,21 +4,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct ElementoPila{
+struct Pila
+{
   int dato;
-  struct ElementoPila *siguiente;
-};
-
-struct PilaId {
-  struct ElementoPila *tope;
-  struct ElementoPila *fondo;
+  struct Pila *tope;
+  struct Pila *fondo;
+  struct Pila *siguiente;
   int tamano;
 };
 
-void inicializacion(struct PilaId *pila);
-int push_pila_vacia(struct PilaId *pila, int dato);
-int push_pila(struct PilaId *pila, int dato);
-void visualizar(struct PilaId *pila);
-int pop(struct PilaId *pila);
+void inicializacion (struct Pila *pila);
+int push_pila_vacia (struct Pila *pila, int dato);
+int push_pila (struct Pila *pila, int dato);
+void visualizar (struct Pila *pila);
+int pop (struct Pila *pila);
 
 #endif
